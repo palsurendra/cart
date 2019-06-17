@@ -1,0 +1,17 @@
+<table border='1'>
+  <tr>
+    <th>#ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th>Action</th>
+
+  </tr>
+  <tr *ngFor="let pro of products">
+    <td>{{ pro.id }}</td>
+    <td>{{ pro.name }}</td>
+    <td>{{ pro.price }}</td>
+    <td>{{ pro.image }}</td>
+    <td><a [routerLink]="['/cart', {id:pro.id}]">Add To Cart</a></td>
+  </tr>
+</table>
